@@ -24,8 +24,9 @@ class App extends Component {
   .catch(err => console.log(err));
   }
   // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  
-  getTweets = async () => {
+
+// By Praveen Kumar Thakur 
+getTweets = async () => {
   const {data} = await axios.get('/getTimeline');
   this.setState({feeds:data})
 
@@ -48,6 +49,7 @@ handlePostTweet = async(status) => {
   const response = await axios.post('/postTweet', status);
 }
 
+// By Jignesh Madhani
 render() {
   const {feeds}= this.state;
   return (
